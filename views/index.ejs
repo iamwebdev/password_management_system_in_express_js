@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+      body {
+        background-image: url("./images/login.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-md-12 mt-5">
+        <h2 style="text-align: center;color: white;margin-top: 10%;"><%= title %></h2>
+        
+        <div class="row mt-5">
+            <div class="col-md-4 mx-auto" style="background-color: black;border-radius: 15px;">
+              <% if (msg) { %>
+                <p style="font-weight: bolder;color:whitesmoke"><%= msg %></p>
+              <% } %>  
+              <form action="/" method="POST">
+                <div class="form-group mt-3">
+                  <label for="exampleInputEmail1" style="color: white;">Email address</label>
+                  <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1" style="color: white;">Password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <center><button type="submit" class="btn btn-dark mb-3">Submit</button></center>
+              </form>
+              <center><a href="/signup">Create new account</a></center>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>

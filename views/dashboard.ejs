@@ -1,0 +1,40 @@
+<%- include('header') %>
+<style>
+.name {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+</style>
+<h4 style="text-align: center;margin-top: 20px;">User Dashboard</h4>
+<div class="container">
+<div class="col-md-12 mt-5">
+    <div class="row mx-auto">
+        <div class="col-md-4">
+            <h1>You are successfully logged in as <span class="name"><%= name %></span></h1>
+        </div>
+        <div class="col-md-8">
+            <img style="height: 100%;width: 100%;" src="./images/user.jpg" alt="">
+        </div>
+    </div>
+</div>
+</div>
+<%- include('footer') %>
